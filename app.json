@@ -1,0 +1,14 @@
+{
+  "name": "gigantonline",
+  "description": "landing page for gigantonline.com",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

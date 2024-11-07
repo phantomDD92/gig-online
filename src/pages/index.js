@@ -16,8 +16,8 @@ export default function IndexPage() {
     <ThemeProvider theme={theme}>
       <Layout> 
         <SEO
-          description="Landing page for Persa.io"
-          title="Persa.io"
+          description="Landing page for GigantOnline"
+          title="Gigant.Online"
         />
         <Banner />
         <Feature />

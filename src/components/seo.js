@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function SEO({
-  description = 'Persia.io landing page',
-  author = 'ForkTech',
+  description = 'GigantOnline Landing Page',
+  author = 'BigBlueThink',
   meta,
-  title = 'Landing',
+  title = 'GigantOnline',
 }) {
   const metaData = [
     {
@@ -44,6 +44,7 @@ export default function SEO({
   return (
     <Head>
       <title>{title}</title>
+      <link rel='icon' href='/favicon.png' type='image/png' />
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}

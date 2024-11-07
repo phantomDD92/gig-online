@@ -6,7 +6,7 @@ import SectionHeader from 'components/section-header';
 
 export default function Support() {
   return (
-    <section sx={{ variant: 'section.support' }} id="support">
+    <section sx={{ variant: 'section.support' }} id="contact">
       <Container>
         <SectionHeader
           title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"

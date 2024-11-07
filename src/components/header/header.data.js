@@ -12,7 +12,7 @@ export default [
     label: 'Feedback',
   },
   {
-    path: 'support',
-    label: 'Support',
+    path: 'contact',
+    label: 'Contact',
   },
 ];

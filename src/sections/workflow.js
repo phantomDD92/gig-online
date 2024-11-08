@@ -6,21 +6,24 @@ import SectionHeader from 'components/section-header';
 const data = [
   {
     id: 1,
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Visibility & Conversion',
+    subtitle:'Boost Engagement',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Elevate your brand to the top of search engine results, ensuring visibility to the right audience. Our strategies enhance your site\'s conversion rate, turning visitors into customers and maximizing online sales.',
   },
   {
     id: 2,
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Lead & Sales',
+    subtitle:'Convert & Grow',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Turn visitors into valuable leads, effectively amplifying your sales. Our targeted approach optimizes conversion tactics, making each interaction a strategic step towards significant business growth.',
   },
   {
     id: 3,
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Marketing Automation',
+    subtitle:'Social Media Growth',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Unify visibility, conversion, and lead generation to dominate your online presence. Our comprehensive marketing solutions are designed to attract and retain customers, ensuring a constant growth.',
   },
 ];
 
@@ -29,16 +32,17 @@ export default function WorkFlow() {
     <section sx={{ variant: 'section.workflow' }}>
       <Container>
         <SectionHeader
-          title="Lorem ipsum dolor sit amet"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="What targets to Check of?"
+          description="Refine your online presence to seamlessly unlock unknown revenue streams."
         />
 
         <Grid sx={styles.grid}>
           {data.map((item) => (
             <Box sx={styles.card} key={item.id}>
-              <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
+              {/* <Box sx={styles.iconBox}>{`0${item.id}`}</Box> */}
               <Box sx={styles.wrapper}>
                 <Heading sx={{ variant: 'text.heading' }}>{item.title}</Heading>
+                <Text sx={{ variant: 'text.subheading' }}>---&nbsp;{item.subtitle}&nbsp;---</Text>
                 <Text sx={styles.wrapper.description}>{item.text}</Text>
               </Box>
             </Box>
@@ -98,7 +102,7 @@ const styles = {
     flexDirection: 'column',
     mt: '-5px',
     description: {
-      fontSize: [1, 2],
+      fontSize: [2, 3],
       fontWeight: 'body',
       lineHeight: 1.9,
       pt: 2,

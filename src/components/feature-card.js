@@ -45,7 +45,7 @@ const styles = {
     mt: ['-4px', '-7px'],
     mb: -1,
     description: {
-      fontSize: [1, 2],
+      fontSize: [2, 3],
       fontWeight: 'body',
       lineHeight: 1.9,
       pt: 2,

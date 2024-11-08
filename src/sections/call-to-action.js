@@ -1,43 +1,74 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Container, Box, Heading, Button } from 'theme-ui';
-
+import { Container, Box, Heading, Label, Input, Select, Textarea, Button } from 'theme-ui';
 import BgShape from 'assets/shape-1.svg';
-import btnShapeTop from 'assets/btn-shape-top.svg';
-import btnShapeBottom from 'assets/btn-shape-bottom.svg';
 
-export default function CallToAction() {
+export default function ContactForm() {
+
   return (
-    <div sx={styles.wrapper}>
-      <Container sx={styles.container}>
-        <Box sx={styles.contentBox}>
-          <Heading sx={styles.heading}>
-            Do you have any question? Feel free to contact us
-          </Heading>
-          <Box sx={styles.btnWrapper}>
-            <Button variant="whiteButton" aria-label="Contact Us">
-              CONTACT US NOW
-            </Button>
-          </Box>
+    <section sx={styles.wrapper} id="call">
+      <Container>
+        <Heading
+          as="h2"
+          sx={{ variant: 'sectionHeader.title', }}
+        >
+          Shoot Us an Email
+        </Heading>
+        <Box as="form" onSubmit={(e) => e.preventDefault()} sx={styles.contentBox}>
+          <Label htmlFor="username" sx={styles.label}>Name</Label>
+          <Input name="username" id="username" mb={3} sx={styles.text} />
+          <Label htmlFor="phone" sx={styles.label}>Phone Number</Label>
+          <Input name="phone" id="phone" mb={3} sx={styles.text} />
+          <Label htmlFor="email" sx={styles.label}>Email</Label>
+          <Input name="email" id="email" mb={3} sx={styles.text} />
+          <Label htmlFor="sound" sx={styles.label}>Are you a</Label>
+          <Select name="sound" id="sound" mb={3} sx={styles.select}>
+            <option>INFLUENCER</option>
+            <option>COMPANY</option>
+            <option>AGENCY</option>
+            <option>BRAND</option>
+            <option>OTHER</option>
+          </Select>
+          <Label htmlFor="message" sx={styles.label}>Message</Label>
+          <Textarea name="message" id="message" rows={6} mb={3} sx={styles.text} />
+          <Button sx={styles.submit}>Submit</Button>
         </Box>
       </Container>
-    </div>
+    </section>
   );
 }
 
 const styles = {
   wrapper: {
-    position: 'relative',
-    zIndex: '10',
-    top: -9,
-    mb: -9,
+    marginTop: [0, null, null, -8],
   },
   container: {
     px: [0, '0 !important', '30px !important'],
   },
+  label: {
+    fontFamily: 'body',
+    fontWeight: 'body',
+    fontSize: [2, 2, 3, null, 3],
+  },
+  text: {
+    fontFamily: 'body',
+    fontWeight: 'body',
+    fontSize: [2, 2, 3, null, 3],
+  },
+  select: {
+    fontFamily: 'body',
+    fontWeight: 'body',
+    fontSize: [2, 2, 3, null, 3],
+    minWidth: '250px',
+  },
+  submit: {
+    borderRadius: '15px',
+    backgroundColor: '#FF6A3B',
+    fontSize: [2, 2, 3, null, 3],
+  },
   contentBox: {
-    padding: ['55px 30px 60px', null, null, '55px 30px 60px', '55px 50px 60px'],
-    backgroundColor: '#3f3d56',
+    padding: ['55px 30px 60px', null, null, '55px 30px 60px', '55px 25% 60px'],
+    // backgroundColor: '#3f3d56',
     backgroundImage: ['none', null, null, `url(${BgShape})`],
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '60% center',
@@ -46,7 +77,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     textAlign: ['center', null, null, 'left'],
-    flexDirection: ['column', null, null, 'row'],
+    flexDirection: ['column', null, null, 'column'],
     justifyContent: ['center', null, null, 'space-between'],
   },
   heading: {
@@ -59,28 +90,5 @@ const styles = {
     width: ['100%', '80%', null, 400, '50%', '45%'],
     mb: [5, null, null, 0],
     mt: -1,
-  },
-  btnWrapper: {
-    display: 'flex',
-    position: 'relative',
-    ':before, :after': {
-      content: '""',
-      position: 'absolute',
-      width: '73px',
-      height: '26px',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      display: ['none', null, null, 'block'],
-    },
-    ':before': {
-      backgroundImage: `url(${btnShapeTop})`,
-      top: '-38px',
-    },
-    ':after': {
-      backgroundImage: `url(${btnShapeBottom})`,
-      bottom: '-38px',
-    },
   },
 };

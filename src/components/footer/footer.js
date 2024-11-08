@@ -5,26 +5,32 @@ import Logo from 'components/logo';
 import menuItems from './footer.data';
 
 import FooterLogo from 'assets/footer-logo.png';
-import CallToAction from 'sections/call-to-action';
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
-      <CallToAction />
       <Container sx={styles.footer.container}>
         <Box sx={styles.footer.footerTopArea}>
           <Box sx={styles.copyrightArea}>
             <Box className="footer__logo">
               <Logo src={FooterLogo} />
             </Box>
-            <nav className="footer__menu">
+            {/* <nav className="footer__menu">
               <Link path="/" label="Terms of use" />
               <Link path="/" label="Privacy" />
-            </nav>
+            </nav> */}
+            <div style={{ height: 30 }} />
             <Text as="p" sx={styles.copyrightArea.copyright}>
-              Copyright by 2021 1337s
+              Copyright ©2018-2024, All Rights Reserved
             </Text>
           </Box>
           <Flex sx={styles.footer.menuArea}>
+            <Box sx={styles.footer.about} >
+              <Text as="p" sx={styles.copyrightArea.copyright}>
+                Unlock your brand's potential with GigantOnline.<br/>
+                Our expertise in marketing automation, web development, custom software, SEO, and targeted advertising on major platforms ensures you get solutions that deliver real results.<br/>
+                Partner with us to streamline your digital strategy and drive exceptional growth.
+              </Text>
+            </Box>
             {menuItems &&
               menuItems.map(({ header, items }, i) => (
                 <Box sx={styles.footer.menus} key={i}>
@@ -62,7 +68,7 @@ const styles = {
       display: 'flex',
       flexWrap: 'wrap',
       pt: ['60px', null, null, null, 8],
-      pb: [7, null, null, null, '30px'],
+      pb: [2, null, null, null, '30px'],
       pl: [0, null, 4, 6, null, 7],
       pr: [0, null, 4, 6],
     },
@@ -79,12 +85,19 @@ const styles = {
       flexWrap: 'wrap',
       pb: 3,
     },
+    about: {
+      mb: ['45px', null, null, '50px', '60px'],
+      pr: 7,
+      pl: 7,
+      width: ['100%', null, '75%', '75%'],
+    },
     menus: {
       display: 'flex',
       flexDirection: 'column',
       mb: ['45px', null, null, '50px', '60px'],
-      pr: 3,
-      width: ['50%', null, null, '25%'],
+      pr: 7,
+      pl: 7,
+      width: ['100%', null, '25%', '25%'],
     },
 
     heading: {
@@ -176,6 +189,7 @@ const styles = {
     copyright: {
       fontSize: ['14px', 1],
       color: '#6D7886',
+      // textAlign: 'center',
       pt: 1,
     },
   },

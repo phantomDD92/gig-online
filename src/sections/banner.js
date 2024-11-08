@@ -1,27 +1,31 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Heading, Text, Image } from 'theme-ui';
-import BannerThumb from 'assets/images/banner-thumb.svg';
-
+import BannerImage from 'assets/images/banner.jpg';
 export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Amplify Your Reach
           </Heading>
+          <Text as="p" variant="heroSubtitle">
+            --- Elevate Your Business ---
+          </Text>
           <Text as="p" variant="heroSecondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            qui officia deserunt mollit anim id est laborum.
+          With GigantOnline, we boost your traffic through powerful social media strategies and cutting-edge SEO.<br/>
+          Our mastery of marketing automation and paid advertising ensures rapid growth and increased revenue.<br/>
+          Ready to skyrocket your business?
+          </Text>
+          <Text as="p" variant="heroSubtitle">
+            Let’s achieve success together.
           </Text>
           {/* <Subscribe /> */}
         </Box>
 
         <Box sx={styles.banner.imageBox}>
-          <Image src={BannerThumb} alt="banner" width="740" height="782" />
+          <Image src={BannerImage} alt="banner" width="600" height="782" />
         </Box>
       </Container>
     </section>

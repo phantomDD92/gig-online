@@ -11,26 +11,26 @@ const data = [
   {
     id: 1,
     imgSrc: Marketplace,
-    altText: 'Lorem ipsum',
-    title: 'Lorem ipsum',
+    altText: 'Website',
+    title: 'Website',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Dreaming of a website that wows? From the drawing board to maintenance, we\'re your go-to team for sites that impress and perform.',
   },
   {
     id: 2,
     imgSrc: Gift,
-    altText: 'Lorem ipsum',
-    title: 'Lorem ipsum',
+    altText: 'Content',
+    title: 'Content',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..',
+      'A website without content is like a party without music. Let\'s fill your site with catchy text, stunning images, and videos that stick.',
   },
   {
     id: 3,
     imgSrc: Award,
-    altText: 'Lorem ipsum',
-    title: 'Lorem ipsum',
+    altText: 'Marketing',
+    title: 'Marketing',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..',
+      'Ready to boost your online presence? Dive into our SEO, SEA, and social media strategies to make your brand pop.',
   },
 ];
 
@@ -38,10 +38,10 @@ export default function Feature() {
   return (
     <section sx={{ variant: 'section.feature' }} id="feature">
       <Container>
-        <SectionHeader
+        {/* <SectionHeader
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+        /> */}
 
         <Grid sx={styles.grid}>
           {data.map((item) => (

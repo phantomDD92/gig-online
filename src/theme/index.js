@@ -109,6 +109,16 @@ export default {
     mx: 'auto',
     marginBottom: [7, null, '60px', null, '65px', null, '70px', 8],
     title: {
+      fontSize: [7, 8, 9, null, 10],
+      color: 'heading',
+      lineHeight: [1.4, 1.45],
+      textAlign: 'center',
+      fontFamily: 'heading',
+      fontWeight: 'body',
+      letterSpacing: 'heading',
+      mb: [3, null, null, null, 4, 5],
+    },
+    subtitle: {
       fontSize: [6, 7, 8, null, 9],
       color: 'heading',
       lineHeight: [1.4, 1.45],
@@ -119,7 +129,7 @@ export default {
       mb: [3, null, null, null, 4, 5],
     },
     description: {
-      fontSize: [1, 2],
+      fontSize: [3, 4],
       color: 'text',
       textAlign: 'center',
       fontWeight: 'body',
@@ -132,7 +142,14 @@ export default {
       fontFamily: 'body',
       lineHeight: [1.5, 'heading'],
       fontWeight: 'heading',
-      fontSize: 3,
+      fontSize: 6,
+      color: 'heading',
+    },
+    subheading: {
+      fontFamily: 'body',
+      lineHeight: [1.5, 'heading'],
+      fontWeight: 'heading',
+      fontSize: 4,
       color: 'heading',
     },
     heroPrimary: {
@@ -142,6 +159,14 @@ export default {
       fontWeight: 'body',
       mb: [4, 5],
       px: [0, 3, 6, 4, 0],
+    },
+    heroSubtitle: {
+      color: 'heading_secondary',
+      fontSize: ['24px', 5, 6, 7, 8, 9, 10, 8, ],
+      lineHeight: [1.2, null, null, null, 1.1],
+      fontWeight: 'body',
+      px: [0, 3, 6, 4, 0],
+      mb: [7, 8],
     },
     heroSecondary: {
       color: 'heading_secondary',
